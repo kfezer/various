@@ -1,0 +1,39 @@
+Written for the Puppet Technical Challenge - Automate the installation and configuration of nginx web server]
+-Karl Fezer 
+
+REQUIREMENTS:
+
+The nginx server must:
+
+(a) serve requests over port 8000
+
+(b) serve a page with the content of the following repository: https://github.com/puppetlabs/exercise-webpage (page from the repository must be served locally)
+
+Your solution should:
+
+(i) ensure that the required configuration is completed reliably when all the steps are completed
+
+(ii) ensure that subsequent applications of the solution do not cause failures or repeat redundant configuration tasks
+
+(iii) ensure that each execution of the solution results in nginx serving the latest available content from the repository linked above
+
+To run:
+Open the folder containing puppetex.sh in terminal
+run
+|chmod +x puppetex.sh
+to run file:
+|sudo ./puppetex.sh
+
+to view website:
+open in browser
+localhost:8000
+
+Dependancies:
+must run as root
+must have git installed
+nginx "default" should be configured as default (i.e., open on port 80)
+ONLY tested on Debian / Ubuntu
+
+On subsequent runs. 
+
+Re-downloads the html file from git and reloads on webpage

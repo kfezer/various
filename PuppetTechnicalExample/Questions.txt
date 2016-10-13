@@ -1,0 +1,52 @@
+Questions for Puppet Technical Challenge
+Karl Fezer
+
+REQUIREMENTS:
+
+The nginx server must:
+
+(a) serve requests over port 8000
+
+(b) serve a page with the content of the following repository: https://github.com/puppetlabs/exercise-webpage (page from the repository must be served locally)
+
+Your solution should:
+
+(i) ensure that the required configuration is completed reliably when all the steps are completed
+
+(ii) ensure that subsequent applications of the solution do not cause failures or repeat redundant configuration tasks
+
+(iii) ensure that each execution of the solution results in nginx serving the latest available content from the repository linked above
+
+
+Questions:
+
+1. Describe the most difficult/painful hurdle you had to overcome in implementing your solution.
+2. Please explain why requirement (ii) above might be important.
+3. Where did you go to find information to help you in the build process?
+4. Briefly explain what automation means to you, and why it is important to an organization's infrastructure design strategy.
+
+1. For me, the most difficult part was the scripting as it's simething I'm relatively inexperianced with. While I have used scripts before,
+However, after doing some digging and understanding what was possible through a few lines of code, I was able to plan out what needed to 
+be done based on the requirements.
+
+The secondary challenge was understanding the Nginx configuration as I've never utilized it as a tool before. I do have experiance with 
+Apache Tomcat, and after doing some reading, understood that Nginx is relatively light-weight and easy to configure. 
+
+2. Requirement (ii) is important becuase running the same script or code twice should not break whatever was done before. I know that
+personally I have run code a few times without checking whether or not it had done what was intended. Scripts should be robust enough
+that it doesn't interfere with itself. It's also an easy way to fix the issue if something went wrong.
+
+3. The Internet? 
+There were a lot of good resources on Github showing example scripts that I used, mostly for learning. 
+Nginx Beginners page was extrememely helpful. 
+As always, Stack Overflow was full of examples and people having similar problems with scripts that I was having. 
+Also, a site I've never used before, Digital Ocean, had some good resources on configuring Nginx.
+
+4. Automation is a tool to facilitate doing a relatively straightforward task. Once the initial work is done in writing the automation,
+it reduces all problems to an easy scale. It also allows an increased workflow as the size of the task is less of an issue. It also avoids
+common mistakes humans make, like typos or running commands in the wrong order. As soon as you do something 3 times, you might as well automate
+it as you will probably use it again and it can serve as a resource to others as you have already done the legwork/learning. 
+
+It also allows those who may not know the required information to be able to do execute the solution as if they did. In an easy to pass along file, 
+it reduces the learning curve. In this example, someone without shell or Nginx information can deploy their own website in a few keystrokes. 
+
