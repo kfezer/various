@@ -1,7 +1,7 @@
 """
 Karl Fezer
 10/3/2016
-Q1 For Mogol Takehome:
+STILL IN PROGRESS
 
 1.       Design a quad tree to store elevation data for a given (lat, lon) coordinate.
  
